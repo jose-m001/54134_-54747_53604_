@@ -33,4 +33,4 @@ jobs:
          
         - name: Run script
           run: |
-           pyton porj7.py
+           pyton porj7v2.py
