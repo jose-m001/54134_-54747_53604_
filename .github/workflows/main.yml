@@ -25,4 +25,4 @@ jobs:
         pip install netmiko
 
     - name: Run the Netmiko script
-      run: Updatescript.py
+      run: python your_script.py 
