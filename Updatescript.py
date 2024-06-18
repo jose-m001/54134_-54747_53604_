@@ -13,10 +13,11 @@ if not os.path.exists(folder_to_save_files):
     os.mkdir(folder_to_save_files)
 
 # Assuming the script is running from the repository root
-f1 = Path('script/switch/ipadd.txt')
+repo_root = Path(__file__).resolve().parent
+f1 = repo_root / 'script' / 'switch' / 'ipadd.txt'
 file1 = f1.read_text().splitlines()
 
-f2 = Path('script/switch/commands.txt')
+f2 = repo_root / 'script' / 'switch' / 'commands.txt'
 file2 = f2.read_text().splitlines()
 
 f3_folder = Path(folder_to_save_files)
