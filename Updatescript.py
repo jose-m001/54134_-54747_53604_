@@ -16,10 +16,13 @@ if not os.path.exists(folder_to_save_files):
 workspace = os.getenv('GITHUB_WORKSPACE', '')
 repo_root = Path(workspace)
 
+# Verify the constructed paths and print them
 f1 = repo_root / 'script' / 'switch' / 'ipadd.txt'
+print(f1)  # Print the path to ipadd.txt
 file1 = f1.read_text().splitlines()
 
 f2 = repo_root / 'script' / 'switch' / 'commands.txt'
+print(f2)  # Print the path to commands.txt
 file2 = f2.read_text().splitlines()
 
 f3_folder = repo_root / folder_to_save_files
@@ -41,7 +44,4 @@ with f3_file.open('w') as file3:
 
         for cmd in file2:
             output = ssh.send_command(cmd)
-            print(f'\n *** Sending {cmd} *** \n')
-            print(f'{output} \n')
-            file3.write(f'\n *** Sending {cmd} *** \n')
-            file3.write(f'{output} \n')
+            prin
