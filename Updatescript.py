@@ -14,7 +14,6 @@ if not os.path.exists(folder_to_save_files):
 
 # Construct paths using GITHUB_WORKSPACE environment variable
 workspace = os.getenv('GITHUB_WORKSPACE', '')
-Path = TeamApplication
 repo_root = Path(workspace) # Adjust as per your repository structure
 
 # Verify the constructed paths and print them
