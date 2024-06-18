@@ -17,7 +17,7 @@ workspace = os.getenv('GITHUB_WORKSPACE', '')
 repo_root = Path(workspace) # Adjust as per your repository structure
 
 # Verify the constructed paths and print them
-f1 = repo_root / 'script' / 'switch' / 'ipadd1.txt'
+f1 = repo_root / 'script' / 'switch' / 'ipadd.txt'
 print(f1)  # Print the path to ipadd1.txt
 file1 = f1.read_text().splitlines()
 
