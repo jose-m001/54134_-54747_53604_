@@ -14,12 +14,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4  # Updated to Node.js 20 compatible version
 
     - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.8'
+      uses: actions/setup-python@v4  # This action doesn't require a specific Node.js version
 
     - name: Install dependencies
       run: |
