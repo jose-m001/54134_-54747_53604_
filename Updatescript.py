@@ -12,6 +12,7 @@ file_extension = ".txt"
 if not os.path.exists(folder_to_save_files):
     os.mkdir(folder_to_save_files)
 
+# Assuming the script is running from the repository root
 f1 = Path('script/switch/ipadd.txt')
 file1 = f1.read_text().splitlines()
 
