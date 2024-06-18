@@ -12,15 +12,17 @@ file_extension = ".txt"
 if not os.path.exists(folder_to_save_files):
     os.mkdir(folder_to_save_files)
 
-# Assuming the script is running from the repository root
-repo_root = Path(__file__).resolve().parent
+# Construct paths using GITHUB_WORKSPACE environment variable
+workspace = os.getenv('GITHUB_WORKSPACE', '')
+repo_root = Path(workspace)
+
 f1 = repo_root / 'script' / 'switch' / 'ipadd.txt'
 file1 = f1.read_text().splitlines()
 
 f2 = repo_root / 'script' / 'switch' / 'commands.txt'
 file2 = f2.read_text().splitlines()
 
-f3_folder = Path(folder_to_save_files)
+f3_folder = repo_root / folder_to_save_files
 f3_file_base = f3_folder / file_base
 f3_file = f3_file_base.with_suffix(file_extension)
 
