@@ -34,9 +34,9 @@ jobs:
       - name: Read ipadd.txt and commands.txt
         run: |
           echo "Content of ipadd.txt:"
-          cat path/to/ipadd.txt  # Replace with actual path
+          cat script/switch/ipadd.txt
           echo "Content of commands.txt:"
-          cat path/to/commands.txt  # Replace with actual path
+          cat script/switch/commands.txt
 
       - name: Run the Netmiko script
         run: python Updatescript.py
