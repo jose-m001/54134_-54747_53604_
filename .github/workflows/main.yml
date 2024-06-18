@@ -25,4 +25,4 @@ jobs:
         pip install netmiko
 
     - name: Run the Netmiko script
-      run: porj7v2.py
+      run: Updatescript.py
