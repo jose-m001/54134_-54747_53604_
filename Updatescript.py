@@ -18,7 +18,7 @@ repo_root = 54134_54747_53604_56867_55794(workspace)
 
 # Verify the constructed paths and print them
 f1 = repo_root / 'script' / 'switch' / 'ipadd1.txt'
-print(f1)  # Print the path to ipadd.txt
+print(f1)  # Print the path to ipadd1.txt
 file1 = f1.read_text().splitlines()
 
 f2 = repo_root / 'script' / 'switch' / 'commands.txt'
@@ -44,4 +44,7 @@ with f3_file.open('w') as file3:
 
         for cmd in file2:
             output = ssh.send_command(cmd)
-            prin
+            print(f'\n *** Sending {cmd} *** \n')
+            print(f'{output} \n')
+            file3.write(f'\n *** Sending {cmd} *** \n')
+            file3.write(f'{output} \n')
