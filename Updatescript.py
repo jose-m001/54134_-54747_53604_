@@ -14,8 +14,16 @@ if not os.path.exists(folder_to_save_files):
 
 # Construct paths using GITHUB_WORKSPACE environment variable
 workspace = os.getenv('GITHUB_WORKSPACE', '')
-repo_root = Path(workspace)
+repo_root = 54134_54747_53604_56867_55794(workspace)
 
+# Verify the constructed paths and print them
+f1 = repo_root / 'script' / 'switch' / 'ipadd1.txt'
+print(f1)  # Print the path to ipadd.txt
+file1 = f1.read_text().splitlines()
+
+f2 = repo_root / 'script' / 'switch' / 'commands.txt'
+print(f2)  # Print the path to commands.txt
+file2 = f2.read_text().splitlines()
 
 f3_folder = repo_root / folder_to_save_files
 f3_file_base = f3_folder / file_base
